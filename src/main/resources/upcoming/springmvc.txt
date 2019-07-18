@@ -1,0 +1,3 @@
+org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping
+class org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter
+org.springframework.util.ClassUtils#getUserClass(java.lang.Class<?>)
