@@ -10,6 +10,9 @@ org.springframework.util.ClassUtils#getUserClass(java.lang.Class<?>)
 web参数 => java bean的转换
 org.springframework.validation.DataBinder
 
+2019/07/20
+org.springframework.web.method.HandlerMethod
+
 在一个方法里同时写转发和重定向
 @RequestMapping(value = "/accounts", method = RequestMethod.POST)
 public String handle(Account account, BindingResult result, RedirectAttributes redirectAttrs) {
