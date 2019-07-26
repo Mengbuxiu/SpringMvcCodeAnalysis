@@ -23,3 +23,13 @@ public String handle(Account account, BindingResult result, RedirectAttributes r
   redirectAttrs.addAttribute("id", account.getId()).addFlashAttribute("message", "Account created!");
   return "redirect:/accounts/{id}";
 }
+---------------------------------
+2019/07/26 15:29 拦截器加载
+
+读取dispatcher-servlet.xml ->
+根拦截器标签读取对应的属性值{mapping,exclude-mapping,bean} ->
+将这三个属性封装到[RootBeanDefinition]中 ->
+注册到上下文
+
+
+why the EmptyReaderEventListener is empty in SpringMvc?

@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletResponse;
  * @description // 访问拦截
  * @date 2019/7/19 15:37
  */
-public class TestAccessInterceptor implements HandlerInterceptor {
+public class AccessChain1Interceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("前置访问器---------------------");
+        System.out.println("Access----------Chain----1-------");
         return true;
     }
 }

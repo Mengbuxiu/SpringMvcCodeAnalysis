@@ -26,6 +26,15 @@ public class HelloController {
         //这里是配置了视图解析器的
         return "hello";
     }
+    //测试最佳匹配
+    @GetMapping("/helloA")
+    public String helloA(){
+        return "hello";
+    }
+    @GetMapping("/hello/any")
+    public String helloAny(){
+        return "hello";
+    }
     @GetMapping("/model")
     public String testModel(Model model){
         //页面传值
