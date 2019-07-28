@@ -14,12 +14,12 @@
     <!--&lt;!&ndash; 添加拦截器&ndash;&gt;-->
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/chain/1"/>
-            <bean class="cn.zl.interceptor.AccessChain1Interceptor"/>
+            <mvc:mapping path="/**"/>
+            <bean class="cn.zl.interceptor.AccessChain2Interceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
-            <mvc:mapping path="/chain/2"/>
-            <bean class="cn.zl.interceptor.AccessChain2Interceptor"/>
+            <mvc:mapping path="/**"/>
+            <bean class="cn.zl.interceptor.AccessChain1Interceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 
