@@ -7,10 +7,11 @@
     <!--spring注解扫描两件套-->
     <!--开启注解扫描-->
     <mvc:annotation-driven/>
+    <!--指定包扫描路径-->
     <context:component-scan base-package="cn.zl.*"/>
-<!--    <bean class="cn.zl.interceptor.OrderInterceptor"/>-->
-<!--            <bean class="cn.zl.interceptor.AccessChain1Interceptor"/>-->
-<!--            <bean class="cn.zl.interceptor.AccessChain2Interceptor"/>-->
+
+    <bean class="cn.zl.entity.Person"/>
+
     <!--&lt;!&ndash; 添加拦截器&ndash;&gt;-->
     <mvc:interceptors>
         <mvc:interceptor>
@@ -23,8 +24,6 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
-
-        <!--指定包扫描路径-->
     <!--指定视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/"/>

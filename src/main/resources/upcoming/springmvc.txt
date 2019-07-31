@@ -1,4 +1,11 @@
 org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping
+       org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping.detectHandlers
+            org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(java.lang.String[], java.lang.String)
+                org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(java.lang.String, java.lang.Object)
+                 LinkedHashMap 存储 urlPath -> Controller
+                    SpringMVC Controller配置方法有哪几种
+                    https://www.cnblogs.com/hoobey/p/7657615.html
+
 class org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter
 org.springframework.util.ClassUtils#getUserClass(java.lang.Class<?>)
 
