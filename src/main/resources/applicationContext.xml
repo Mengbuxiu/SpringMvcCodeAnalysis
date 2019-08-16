@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+
+                <!--<property name="host" value="smtp.qq.com"/>
+                <property name="username" value="1343168470@qq.com"/>
+                <property name="password" value="tnqpdycfjxuqjcjf"/>-->
+<!--                <property name="host" value="smtp.163.com"/>-->
+                <property name="host" value="smtp.163.com"/>
+                <property name="username" value="15910344021@163.com"/>
+                <property name="password" value="lin123456789"/>
+                <property name="port" value="25"/>
+<!--                <property name="port" value="465"/>-->
+<!--                <property name="port" value="994"/>-->
+                <property name="javaMailProperties">
+                        <props>
+                                <prop key="mail.smtp.auth">true</prop>
+                                <!-- 发送邮件时长 -->
+                                <prop key="mail.smtp.timeout">5000</prop>
+                                <!-- 连接时长 -->
+                                <prop key="mail.smtp.connectiontimeout">3000</prop>
+                                <!--<prop key="mail.imap.auth.login.disable">true</prop>
+                                <prop key="mail.imap.timeout">5000</prop>
+                                <prop key="mail.imap.connectiontimeout">3000</prop>-->
+                        </props>
+                </property>
+        </bean>
+</beans>

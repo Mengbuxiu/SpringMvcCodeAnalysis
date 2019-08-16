@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @date 2019/7/16 21:47
  */
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/src/test")
 public class HelloController {
     /* 当未在dispatcher-servlet中添加视图解析器时，spring会有默认的视图解析器，
         但需写绝对路径，因为没有配置前缀和后缀
