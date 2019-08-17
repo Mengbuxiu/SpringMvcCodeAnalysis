@@ -11,7 +11,7 @@
     <context:component-scan base-package="cn.zl.*"/>
 
     <bean class="cn.zl.entity.Person"/>
-<!--    <bean class="cn.zl.system.email.EmailSend"/>-->
+<!--    <bean class="cn.zl.system.email.company.EmailSend"/>-->
 
     <!--&lt;!&ndash; 添加拦截器&ndash;&gt;-->
     <mvc:interceptors>

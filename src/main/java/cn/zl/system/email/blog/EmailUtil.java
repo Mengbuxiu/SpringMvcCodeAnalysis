@@ -1,10 +1,8 @@
-package cn.zl.system.email;
+package cn.zl.system.email.blog;
 
 import javax.mail.*;
 import javax.mail.Message.RecipientType;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeUtility;
+import javax.mail.internet.*;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.Properties;
@@ -73,6 +71,7 @@ public class EmailUtil {
         Session session = createSession(props);
         // 消息
         Message msg = new MimeMessage(session);
+        msg.setFileName("test.pic");
         msg.setFrom(InternetAddress.parse(MimeUtility.decodeText(sem.getFrom()))[0]);
         // TO为初级收件人，CC为邮件副本抄送，BCC应该是密秘抄送吧
         msg.setRecipients(RecipientType.TO, InternetAddress.parse(sem.getRecipient()));

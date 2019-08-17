@@ -1,4 +1,4 @@
-package cn.zl.system.email;
+package cn.zl.system.email.blog;
 
 import java.util.Properties;
 

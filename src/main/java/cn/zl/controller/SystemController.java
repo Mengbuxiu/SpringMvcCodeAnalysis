@@ -1,6 +1,6 @@
 package cn.zl.controller;
 
-import cn.zl.system.email.EmailSend;
+import cn.zl.system.email.company.EmailSend;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,10 +28,9 @@ public class SystemController {
     @ResponseBody
     public String sendSimpleMail() {
         try {
-//            "17746563521@163.com",
-            byte[] arr= FileUtils.readFileToByteArray(new File("C:\\Users\\king_zl\\Pictures\\Saved Pictures\\3.jpg"));
+            byte[] arr= FileUtils.readFileToByteArray(new File("C:\\Users\\k_zl\\Pictures\\Saved Pictures\\3.jpg"));
             emailSend.sendSimpleMail(
-                    "297098453@qq.com",
+                    "134310@qq.com",
                     "test for company has from",
                     "warning!",
                     "pic.jpg",

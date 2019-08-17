@@ -1,8 +1,7 @@
-package cn.zl.system.email;
+package cn.zl.system.email.company;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
@@ -19,11 +18,12 @@ import java.io.UnsupportedEncodingException;
  */
 @Component("email")
 public class EmailSend {
-    @Autowired
-    private JavaMailSenderImpl mailSender;
+    private final JavaMailSender mailSender;
 
-    public static void emailSet(){
+    public EmailSend(JavaMailSender mailSender) {
+        this.mailSender = mailSender;
     }
+
     public void sendSimpleMail(String to,
                                String mailTitle,
                                String mailContent,
@@ -40,7 +40,7 @@ public class EmailSend {
             mimeMessageHelper = new MimeMessageHelper(mimeMessage);
         }
         mimeMessageHelper.setTo(to);
-        mimeMessageHelper.setFrom("15910344021@163.com");
+        mimeMessageHelper.setFrom("15021@163.com");
         mimeMessageHelper.setSubject(mailTitle);
         mimeMessageHelper.setText(mailContent);
         mailSender.send(mimeMessage);
