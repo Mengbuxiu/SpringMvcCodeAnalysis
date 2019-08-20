@@ -71,9 +71,8 @@ public class EmailUtil {
         Session session = createSession(props);
         // 消息
         Message msg = new MimeMessage(session);
-        msg.setFileName("test.pic");
         msg.setFrom(InternetAddress.parse(MimeUtility.decodeText(sem.getFrom()))[0]);
-        // TO为初级收件人，CC为邮件副本抄送，BCC应该是密秘抄送吧
+        // TO为初级收件人，CC为邮件副本抄送，BCC应该是密秘抄送
         msg.setRecipients(RecipientType.TO, InternetAddress.parse(sem.getRecipient()));
         msg.setSubject(sem.getSubject());
         msg.setText(sem.getText());
@@ -89,7 +88,7 @@ public class EmailUtil {
      * @throws Exception
      */
 
-    public void receiveMail(Properties props, String protocol) throws Exception {
+   /* public void receiveMail(Properties props, String protocol) throws Exception {
         Session session = createSession(props);
 
         Store store = session.getStore(protocol);
@@ -129,7 +128,7 @@ public class EmailUtil {
 
         store.close();
 
-    }
+    }*/
 
 
     /**

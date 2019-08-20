@@ -12,7 +12,7 @@ public class DefaultConfigurer {
 
     /**
      * 获取SMTP默认配置
-     * SSL ？
+     * SSL
      * @return
      */
     public static Properties getSMTP() {
