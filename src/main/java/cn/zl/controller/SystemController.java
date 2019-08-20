@@ -2,7 +2,6 @@ package cn.zl.controller;
 
 import cn.zl.system.email.company.EmailSend;
 import org.apache.commons.io.FileUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,16 +20,19 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/system")
 public class SystemController {
-    @Autowired
-    private EmailSend emailSend;
+    private final EmailSend emailSend;
+
+    public SystemController(EmailSend emailSend) {
+        this.emailSend = emailSend;
+    }
 
     @GetMapping("/mail/send")
     @ResponseBody
     public String sendSimpleMail() {
         try {
-            byte[] arr= FileUtils.readFileToByteArray(new File("C:\\Users\\k_zl\\Pictures\\Saved Pictures\\3.jpg"));
+            byte[] arr= FileUtils.readFileToByteArray(new File("C:\\Users\\king_zl\\Pictures\\Saved Pictures\\4.jpg"));
             emailSend.sendSimpleMail(
-                    "134310@qq.com",
+                    "@qq.com",
                     "test for company has from",
                     "warning!",
                     "pic.jpg",

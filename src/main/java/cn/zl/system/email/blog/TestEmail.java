@@ -20,17 +20,17 @@ public class TestEmail {
     public void testJavaMailSender() throws IOException, MessagingException {
         JavaMailSenderImpl sender = new JavaMailSenderImpl();
         sender.setHost("smtp.163.com");
-        sender.setUsername("1591@163.com");
-        sender.setPassword("li");
-        sender.setPort(25);
-        sender.setProtocol("smtp");
+        sender.setUsername("@163.com");
+        sender.setPassword("lin123465789");
+        sender.setPort(465);
+//        sender.setProtocol("ssl");
 
         EmailSend emailSend = new EmailSend(sender);
-        byte[] arr= FileUtils.readFileToByteArray(new File("C:\\Users\\ki\\Pictures\\Saved Pictures\\3.jpg"));
+        byte[] arr= FileUtils.readFileToByteArray(new File("C:\\Users\\king_zl\\Pictures\\Saved Pictures\\4.jpg"));
         emailSend.sendSimpleMail(
-                "134@qq.com",
+                "@qq.com",
                 "test for company has from",
-                "warning!",
+                "hello!",
                 "pic.jpg",
                 arr);
     }
@@ -42,11 +42,11 @@ public class TestEmail {
     @Test
     public void testSSL() throws Exception {
 // 默认情况下，在这里输入QQ号和密码，便可收信与发信 
-        EmailUtil email = new EmailUtil("11@163.com", "l");
+        EmailUtil email = new EmailUtil("@163.com", "");
         SendEmailMessage message = new SendEmailMessage();
-        message.setFrom("1591@163.com");
-        message.setRecipient("134@qq.com");
-        message.setSubject("大哥哎~");
+        message.setFrom("@163.com");
+        message.setRecipient("@qq.com");
+        message.setSubject("大哥哎~yo");
         message.setText("类好哇");
         email.sendMail(DefaultConfigurer.getSMTP(), message);
         System.out.println("发送成功");
@@ -56,4 +56,4 @@ public class TestEmail {
 // 使用IMAP收信会抛出 Failed to load IMAP envelope 异常 
 //email.receiveMail(DefaultConfigurer.getIMAP(), "imap"); // imap收信
     }
-} 
+}

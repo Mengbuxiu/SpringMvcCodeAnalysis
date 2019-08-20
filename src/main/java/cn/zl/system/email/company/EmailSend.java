@@ -16,7 +16,7 @@ import java.io.UnsupportedEncodingException;
  * @description // 邮件发送工具类
  * @date 2019/8/15 14:12
  */
-@Component("email")
+@Component("emailSend")
 public class EmailSend {
     private final JavaMailSender mailSender;
 
@@ -40,7 +40,7 @@ public class EmailSend {
             mimeMessageHelper = new MimeMessageHelper(mimeMessage);
         }
         mimeMessageHelper.setTo(to);
-        mimeMessageHelper.setFrom("15021@163.com");
+        mimeMessageHelper.setFrom("@163.com");
         mimeMessageHelper.setSubject(mailTitle);
         mimeMessageHelper.setText(mailContent);
         mailSender.send(mimeMessage);
